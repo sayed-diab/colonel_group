@@ -5,21 +5,19 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // ✅ التسمية الصحيحة components
-const LazyComponent = (path: string) => React.lazy(() => import(`./${path}.tsx`));
-
 const components = {
-  Header: LazyComponent('components/Header'),
-  Footer: LazyComponent('components/Footer'),
-  Home: LazyComponent('pages/Home'),
-  About: LazyComponent('pages/AboutUs'),
-  NotFound: LazyComponent('pages/404'),
-  Careers: LazyComponent('pages/Careers'),
-  News: LazyComponent('pages/News'),
-  Sectors: LazyComponent('pages/Sectors'),
-  Faq: LazyComponent('pages/Faq'),
-  Colcons: LazyComponent('pages/Colcons'),
-  Colgen: LazyComponent('pages/Colgen'),
-  Coltech: LazyComponent('pages/Coltech'),
+  Header: React.lazy(() => import('./components/Header')),
+  Footer: React.lazy(() => import('./components/Footer')),
+  Home: React.lazy(() => import('./pages/Home')),
+  About: React.lazy(() => import('./pages/AboutUs')),
+  NotFound: React.lazy(() => import('./pages/404')),
+  Careers: React.lazy(() => import('./pages/Careers')),
+  News: React.lazy(() => import('./pages/News')),
+  Sectors: React.lazy(() => import('./pages/Sectors')),
+  Faq: React.lazy(() => import('./pages/Faq')),
+  Colcons: React.lazy(() => import('./pages/Colcons')),
+  Colgen: React.lazy(() => import('./pages/Colgen')),
+  Coltech: React.lazy(() => import('./pages/Coltech')),
 };
 const box = {
   width: 100,
