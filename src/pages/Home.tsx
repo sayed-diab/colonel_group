@@ -23,7 +23,6 @@ import loto_two from '../assets/Network.json';
 import Loader from '../components/Loader';
 import networkAR from '../assets/v1QQ66VY7B7RGu5DeY8EPEZ0s4.webp';
 import networkEN from '../assets/78bAWdOWyyxGI46CcjagvqAWE4w.png';
-import Ball from '../components/Ball';
 declare global {
   interface Window {
     FinisherHeader?: new (options: object) => unknown;
