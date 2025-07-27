@@ -56,7 +56,7 @@ function App() {
 
         <Routes>
           <Route
-            path="/"
+            path="/colonel_group/"
             element={<components.Home />}
           />
           <Route

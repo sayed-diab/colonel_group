@@ -6,4 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: '/colonel_group/',
+  optimizeDeps: {
+    include: ['animejs/lib/anime.es.js'],
+  },
 });

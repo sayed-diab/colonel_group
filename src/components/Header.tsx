@@ -79,9 +79,9 @@ const Header = () => {
                   alt="logo"
                   className="w-8 block lg:hidden"
                 />
-                <span className="font-[Qwigley] text-2xl lg:text-3xl mt-2">{t('logo')}</span>
+                <span className="font-[Qwigley] text-2xl lg:text-3xl ">{t('logo')}</span>
               </a>
-              <div className="hidden  md:flex sm:items-center">
+              <div className="hidden  md:flex  sm:items-center md:justify-between">
                 <div className="flex space-x-4">
                   <NavLink
                     to="/"
@@ -141,14 +141,13 @@ const Header = () => {
                       {item.name}
                     </NavLink>
                   ))}
-
-                  <button
-                    className="cursor-pointer border-2 border-white text-white! rounded-md px-3 py-1.5 sm:py-2 text-sm font-medium md:relative fixed top-1/2"
-                    onClick={toggleLanguage}
-                  >
-                    {i18n.language === 'ar' ? 'English' : 'عربي'}
-                  </button>
                 </div>
+                <button
+                  className="cursor-pointer border border-[#eecd53] text-white! rounded-md px-3 py-1.5 sm:py-2 text-sm font-medium md:relative fixed top-1/2 !mx-20"
+                  onClick={toggleLanguage}
+                >
+                  {i18n.language === 'ar' ? 'English' : 'عربي'}
+                </button>
               </div>
             </div>
           </div>
@@ -275,7 +274,7 @@ const Header = () => {
                   alt="logo"
                   className="w-8 block lg:hidden"
                 />
-                <span className="font-[Qwigley] text-2xl lg:text-3xl mt-2">{t('logo')}</span>
+                <span className="font-[Qwigley] text-2xl lg:text-3xl ">{t('logo')}</span>
               </a>
               <div className="hidden  md:flex sm:items-center">
                 <div className="flex space-x-4">
@@ -339,7 +338,7 @@ const Header = () => {
                   ))}
 
                   <button
-                    className="cursor-pointer border-2 border-white text-white! rounded-md px-3 py-1.5 sm:py-2 text-sm font-medium md:relative fixed top-1/2"
+                    className="cursor-pointer border border-[#eecd53] text-white! rounded-md px-3 py-1.5 sm:py-2 text-sm font-medium md:relative fixed top-1/2 !mx-20"
                     onClick={toggleLanguage}
                   >
                     {i18n.language === 'ar' ? 'English' : 'عربي'}

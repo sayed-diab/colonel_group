@@ -21,6 +21,8 @@
     "@lottiefiles/dotlottie-react": "^0.14.4",
     "@lottiefiles/react-lottie-player": "^3.6.0",
     "@tailwindcss/vite": "^4.1.11",
+    "@types/animejs": "^3.1.13",
+    "animejs": "^3.2.1",
     "antd": "^5.26.4",
     "i18next": "^25.3.1",
     "i18next-http-backend": "^3.0.2",

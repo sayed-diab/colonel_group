@@ -23,6 +23,7 @@ import loto_two from '../assets/Network.json';
 import Loader from '../components/Loader';
 import networkAR from '../assets/v1QQ66VY7B7RGu5DeY8EPEZ0s4.webp';
 import networkEN from '../assets/78bAWdOWyyxGI46CcjagvqAWE4w.png';
+import Ball from '../components/Ball';
 declare global {
   interface Window {
     FinisherHeader?: new (options: object) => unknown;
@@ -72,7 +73,7 @@ export default function HeroFinisher() {
           className="finisher-header "
           style={{ width: '100%', height: '120vh' }}
         >
-          <div className="z-10 flex items-start md:-mt-70 md:h-[120vh] flex-col pt-50 md:pb-50 mx-10 md:pt-100 md:mx-40">
+          <div className="hero_info z-10 flex items-start md:-mt-70 md:h-[120vh] flex-col  md:pb-50 mx-10  md:mx-40">
             <motion.span
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -112,7 +113,7 @@ export default function HeroFinisher() {
             >
               {t('hero_paragraph')}
             </motion.p>
-            <div className="flex flex-col md:flex-row  mx-auto gap-10 md:gap-4 justify-center items-center  relative mt-30 md:mt-50 mb-10">
+            <div className="hero_imgs flex flex-col md:flex-row  mx-auto gap-10 md:gap-4 justify-center items-center  relative  mb-10">
               <motion.ul className="groups_ flex z-10">
                 <motion.li
                   initial={{ opacity: 0, x: -13 }}
@@ -850,6 +851,7 @@ export default function HeroFinisher() {
           </motion.div>
         </motion.div>
       </div>
+      <div className="contact_container "></div>
     </main>
   );
 }
