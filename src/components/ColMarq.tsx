@@ -66,7 +66,7 @@ const ColMarq = () => {
 
   return (
     <div className="col_marq px-10 max-w-[1200px]">
-      <div className="marq_wrapper rounded-2xl border border-[#ffffff1a] py-[15px]">
+      <div className="marq_wrapper rounded-2xl border border-[#ffffff1a] py-[15px] ">
         <FastMarquee
           gradient={true}
           pauseOnClick={true}
@@ -83,7 +83,7 @@ const ColMarq = () => {
             <div className="text-[#13311e] w-[77px] -mb-2.5 -ml-2.5">
               <CustomSVG2 />
             </div>
-            <p className="text-white max-w-[40ch]">
+            <p className="text-white max-w-[30ch]">
               Strategic Spare Parts Supply for an Oil &amp; Gas Company
               <br />
               <br />
@@ -108,7 +108,7 @@ const ColMarq = () => {
             <div className="text-[#13311e] w-[77px] -mb-2.5 -ml-2.5">
               <CustomSVG2 />
             </div>
-            <p className="text-white max-w-[40ch]">
+            <p className="text-white max-w-[30ch]">
               Emergency Food Supplies for a Humanitarian Relief Program
               <br />
               <br />
@@ -134,7 +134,7 @@ const ColMarq = () => {
             <div className="text-[#13311e] w-[77px] -mb-2.5 -ml-2.5">
               <CustomSVG2 />
             </div>
-            <p className="text-white max-w-[40ch]">
+            <p className="text-white max-w-[30ch]">
               Integrated Equipment Supply for a Government Institutionbr <br />
               <br />
               <strong className="!pt-10">Challenge:</strong> <br />A major government entity required a full infrastructure upgrade, including modern electronic equipment and office furniture, to enhance operational efficiency and improve the working environment for staff.
