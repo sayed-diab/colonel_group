@@ -7,7 +7,8 @@ const SphereAnimation: React.FC = () => {
 
   useEffect(() => {
     function fitElementToParent(el: HTMLElement, padding?: number) {
-      let timeout: number | null = null;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let timeout: any = null;
       function resize() {
         if (timeout) clearTimeout(timeout);
         anime.set(el, { scale: 1 });
