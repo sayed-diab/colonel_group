@@ -11,17 +11,17 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="footer contact_container bg-[#171717] text-white">
+    <footer className="footer contact_container bg-[#171717] text-white ">
       <div className="max-w-[1200px] flex flex-col-reverse md:flex-row mx-auto items-center justify-center pt-[100px] pb-[100px] gap-10">
         <div className="contact_info p-5 md:w-1/2 text-white  flex flex-col ">
-          <motion.h3 className=" font-bold text-2xl">{t('contact_w')}</motion.h3>
-          <motion.p className=" text-[#c9c9c9]">{t('contact_p1')}</motion.p>
-          <motion.p className=" text-[#c9c9c9]">{t('contact_p2')}</motion.p>
-          <motion.p className=" text-[#c9c9c9]">{t('contact_p3')}</motion.p>
-          <motion.p className=" text-[#c9c9c9]">{t('contact_p4')}</motion.p>
+          <motion.h3 className=" font-bold  text-lg md:text-2xl">{t('contact_w')}</motion.h3>
+          <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9]">{t('contact_p1')}</motion.p>
+          <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9]">{t('contact_p2')}</motion.p>
+          <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9]">{t('contact_p3')}</motion.p>
+          <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9] !mb-4">{t('contact_p4')}</motion.p>
           <motion.div
             initial={{ opacity: 0, filter: 'blur(20px)' }}
-            animate={{ opacity: 1, filter: 'blur(0px)' }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{
               delay: 0.8,
               duration: 0.6,
@@ -29,7 +29,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <Link
-              className="text-white learn_btn"
+              className="text-white learn_btn !text-xs md:!text-sm "
               to="/careers"
             >
               {t('contact_b')}
@@ -40,8 +40,8 @@ const Footer = () => {
         <Ball />
       </div>
       <div className="footer-container  flex flex-col items-center w-full">
-        {/* <hr className="mb-[20px] text-[#8a8a8a4d] w-full" />
-        <hr className="text-[#8a8a8a4d] w-full" /> */}
+        {/* <hr className="mb-[20px] text-[#8a8a8a4d] w-full" /> */}
+        <hr className="!border-[#463d3d75] mb-[30px] w-full" />
         <div className="footer-content flex flex-col gap-5 md:flex-row justify-between items-center w-full max-w-[1200px] pb-10 md:pb-10 md:py-10 md:px-4">
           <div className="footer-logo">
             <Link to="/">
@@ -54,36 +54,50 @@ const Footer = () => {
           </div>
           <div className="footer-links flex flex-col justify-center items-center">
             <ul className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-8">
-              <li className="text-white hover:text-[#eecd53] transition-colors duration-300">
+              <li className="text-white text-sm hover:text-[#eecd53] transition-colors duration-300">
                 <Link to="/">{t('home')}</Link>
               </li>
-              <li className="text-white hover:text-[#eecd53] transition-colors duration-300">
+              <li className="text-white text-sm hover:text-[#eecd53] transition-colors duration-300">
                 <Link to="/about">{t('about')}</Link>
               </li>
-              <li className="text-white hover:text-[#eecd53] transition-colors duration-300">
+              <li className="text-white text-sm hover:text-[#eecd53] transition-colors duration-300">
                 <Link to="/news">{t('news')}</Link>
               </li>
-              <li className="text-white hover:text-[#eecd53] transition-colors duration-300">
+              <li className="text-white text-sm hover:text-[#eecd53] transition-colors duration-300">
                 <Link to="/sectors">{t('sectors')}</Link>
               </li>
-              <li className="text-white hover:text-[#eecd53] transition-colors duration-300">
+              <li className="text-white text-sm hover:text-[#eecd53] transition-colors duration-300">
                 <Link to="/faq">{t('faq')}</Link>
               </li>
             </ul>
-            <span className="text-sm text-[#c9c9c9]">{t('rights')}</span>
-          </div>
-          <div className="socials">
+            <span className="text-xs text-[#c9c9c9]">{t('rights')}</span>
             <a
-              href="https://www.linkedin.com/company/colonelae/"
+              href="https://sayed-dev.vercel.app/"
               target="_blank"
-              rel="noopener noreferrer"
+              className="mt-6 hidden md:block"
             >
+              <span className="text-xs text-[#494545]">created By</span> <span className="text-xs text-[#c9c9c9] hover:underline font-bold">Diab</span>
+            </a>
+          </div>
+          <a
+            href="https://www.linkedin.com/company/colonelae/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="socials rounded-md border border-[#ddd] py-1.5 px-1.5">
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className="text-white"
               />
-            </a>
-          </div>
+            </div>
+          </a>
+          <a
+            href="https://sayed-dev.vercel.app/"
+            target="_blank"
+            className="mt-6 block md:hidden"
+          >
+            <span className="text-xs text-[#494545]">created By</span> <span className="text-xs text-[#c9c9c9] hover:underline font-bold">Diab</span>
+          </a>
         </div>
       </div>
     </footer>

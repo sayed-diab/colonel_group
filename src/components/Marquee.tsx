@@ -19,7 +19,10 @@ import FastMarquee from 'react-fast-marquee';
 
 const Marquee = () => {
   return (
-    <FastMarquee className="logo-marquee">
+    <FastMarquee
+      loop={50}
+      className="logo-marquee"
+    >
       <img
         src={f1}
         alt="col-logos"

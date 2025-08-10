@@ -1,5 +1,5 @@
 .animation-wrapper {
-    width: 400px;
+    width: 340px;
     /* padding-bottom: 50%; */
 }
 
@@ -43,7 +43,7 @@
 
 @media (max-width: 512px) {
     .animation-wrapper {
-        width: 320px;
+        width: 240px;
     }
 
 }

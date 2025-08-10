@@ -4,11 +4,30 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 30%, rgba(237, 221, 83, 0) 60%);
 }
 
+.header__ a:not(.logo__) {
+    font-size: 12px;
+}
+
+body[dir=rtl] .header__ a:not(.logo__) {
+    font-size: 18px !important;
+}
+
+.header_menu {
+    font-size: 12px !important;
+
+}
+
+body[dir=rtl] .header_menu {
+    font-size: 18px !important;
+
+}
+
 .two {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.808);
 }
 
 body[dir=rtl] .t_btn {
+    font-family: 'Courier New', Courier, monospace !important;
     left: -1px;
     border-color: #eecd53 #eecd53 #eecd53 transparent;
 
@@ -47,6 +66,6 @@ body[dir=ltr] .t_btn {
 @media (max-width: 768px) {
     .header__ {
         background-size: contain;
-        background: #00000063;
+        background: #0000008e;
     }
 }

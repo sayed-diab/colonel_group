@@ -8,6 +8,9 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Drawer } from 'antd';
 import logo from '../assets/logo-main.png';
+import colgen from '../assets/colgen.png';
+import coltech from '../assets/coltech.png';
+import colcons from '../assets/colcons.png';
 import '../styles/header.css';
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -38,10 +41,10 @@ const Header = () => {
   const showDrawer = () => setOpen(true);
   const onClose = () => setOpen(false);
   const navigation = [
-    { name: t('about'), href: '/about' },
-    { name: t('careers'), href: '/careers' },
     { name: t('news'), href: '/news' },
     { name: t('sectors'), href: '/sectors' },
+    { name: t('careers'), href: '/careers' },
+    { name: t('about'), href: '/about' },
     { name: t('faq'), href: '/faq' },
   ];
   return (
@@ -79,7 +82,7 @@ const Header = () => {
                   alt="logo"
                   className="w-8 block lg:hidden"
                 />
-                <span className="font-[Qwigley] text-2xl lg:text-3xl ">{t('logo')}</span>
+                <span className="font-[arial] text-2xl lg:text-3xl ">{t('logo')}</span>
               </a>
               <div className="hidden  md:flex  sm:items-center md:justify-between">
                 <div className="flex space-x-4">
@@ -91,9 +94,9 @@ const Header = () => {
                   </NavLink>
                   <Menu
                     as="div"
-                    className="relative flex flex-col items-center"
+                    className="relative flex items-center"
                   >
-                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5  cursor-pointer hover:text-white mx-auto text-center rounded-md text-white! py-2 text-sm font-medium hover:text-[#fed017]! transition duration-300">
+                    <MenuButton className="header_menu flex w-full justify-center gap-x-1.5  cursor-pointer hover:text-white mx-auto text-center rounded-md text-white! !pb-0  font-medium hover:text-[#fed017]! transition duration-300">
                       {t('companies')}
                       <ChevronDownIcon
                         aria-hidden="true"
@@ -102,32 +105,53 @@ const Header = () => {
                     </MenuButton>
                     <MenuItems
                       transition
-                      className="Menu__ absolute border-1 border-[#fed017] right-0 z-10 mt-11 w-48 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                      className="Menu__ absolute border-1 border-[#fed017] left-0 z-10 top-10  w-80 origin-top-right rounded-md bg-black ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
                     >
                       <MenuItem>
                         <NavLink
                           to="/companies/colgen"
-                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white! rounded-t-md' : 'text-black! hover:bg-gray-900 rounded-t-md hover:text-white! block px-3 py-2 ')}
+                          className={({ isActive }) => (isActive ? 'block bg-gray-900 px-3 py-2 text-[#fed017] rounded-t-md' : 'block text-white hover:bg-gray-900 rounded-t-md hover:text-white  px-3 py-2 ')}
                         >
-                          {t('companies_1')}
+                          <div className="flex items-center gap-x-1.5 font-md hover:text-[#fed017]">
+                            <img
+                              className="w-[42px]"
+                              src={colgen}
+                              alt=""
+                            />
+                            {t('companies_1')}
+                          </div>
                         </NavLink>
                       </MenuItem>
                       <hr className="text-[#fed017]" />
                       <MenuItem>
                         <NavLink
                           to="/companies/coltech"
-                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white ' : 'text-black! hover:bg-gray-900  hover:text-white! block px-3 py-2 ')}
+                          className={({ isActive }) => (isActive ? 'block bg-gray-900 px-3 py-2 text-[#fed017] rounded-t-md' : 'block text-white hover:bg-gray-900 rounded-t-md hover:text-white  px-3 py-2 ')}
                         >
-                          {t('companies_2')}
+                          <div className="flex items-center gap-x-1.5 font-md hover:text-[#fed017]">
+                            <img
+                              className="w-[42px]"
+                              src={coltech}
+                              alt=""
+                            />
+                            {t('companies_2')}
+                          </div>
                         </NavLink>
                       </MenuItem>
                       <hr className="text-[#fed017]" />
                       <MenuItem>
                         <NavLink
                           to="/companies/colcons"
-                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-2 py-2 text-white rounded-b-md' : 'text-black! hover:bg-gray-900 rounded-b-md hover:text-white! block px-3 py-2 ')}
+                          className={({ isActive }) => (isActive ? 'block bg-gray-900 px-3 py-2 text-[#fed017] rounded-b-md' : 'block text-white hover:bg-gray-900 rounded-b-md hover:text-white  px-3 py-2 ')}
                         >
-                          {t('companies_3')}
+                          <div className="flex items-center gap-x-1.5 font-md hover:text-[#fed017]">
+                            <img
+                              className="w-[42px]"
+                              src={colcons}
+                              alt=""
+                            />
+                            {t('companies_3')}
+                          </div>
                         </NavLink>
                       </MenuItem>
                     </MenuItems>
@@ -184,7 +208,7 @@ const Header = () => {
               as="div"
               className="relative flex flex-col items-center"
             >
-              <MenuButton className="inline-flex w-full justify-center gap-x-1.5 text-gray-300  hover:text-white mx-auto text-center rounded-md  py-2 text-sm font-medium">
+              <MenuButton className="header_menu flex w-full justify-center gap-x-1.5 text-gray-300  hover:text-white mx-auto text-center rounded-md   !text-[14px] font-medium">
                 {t('companies')}
                 <ChevronDownIcon
                   aria-hidden="true"
@@ -193,12 +217,12 @@ const Header = () => {
               </MenuButton>
               <MenuItems
                 transition
-                className="Menu__ absolute border-1 border-[#fed017] right-0 z-10 mt-11 w-48 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                className="Menu__ absolute border-1 border-[#fed017] -right-10 z-10 mt-11 w-48 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
               >
                 <MenuItem>
                   <NavLink
                     to="/companies/colgen"
-                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white! rounded-t-md' : 'text-black! hover:bg-gray-900 rounded-t-md hover:text-white! block px-3 py-2 ')}
+                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 !text-[#fed017] rounded-t-md' : 'text-black! hover:bg-gray-900 rounded-t-md hover:text-white! block px-3 py-2 ')}
                   >
                     {t('companies_1')}
                   </NavLink>
@@ -207,7 +231,7 @@ const Header = () => {
                 <MenuItem>
                   <NavLink
                     to="/companies/coltech"
-                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white ' : 'text-black! hover:bg-gray-900  hover:text-white! block px-3 py-2 ')}
+                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-[#fed017]' : 'text-black! hover:bg-gray-900  hover:text-white! block px-3 py-2 ')}
                   >
                     {t('companies_2')}
                   </NavLink>
@@ -216,7 +240,7 @@ const Header = () => {
                 <MenuItem>
                   <NavLink
                     to="/companies/colcons"
-                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-2 py-2 text-white rounded-b-md' : 'text-black! hover:bg-gray-900 rounded-b-md hover:text-white! block px-3 py-2 ')}
+                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-2 py-2 text-[#fed017] rounded-b-md' : 'text-black! hover:bg-gray-900 rounded-b-md hover:text-white! block px-3 py-2 ')}
                   >
                     {t('companies_3')}
                   </NavLink>
@@ -274,7 +298,7 @@ const Header = () => {
                   alt="logo"
                   className="w-8 block lg:hidden"
                 />
-                <span className="font-[Qwigley] text-2xl lg:text-3xl ">{t('logo')}</span>
+                <span className="font-[arial] text-2xl lg:text-3xl ">{t('logo')}</span>
               </a>
               <div className="hidden  md:flex sm:items-center">
                 <div className="flex space-x-4">
@@ -288,7 +312,7 @@ const Header = () => {
                     as="div"
                     className="relative flex flex-col items-center"
                   >
-                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5  cursor-pointer hover:text-white mx-auto text-center rounded-md text-white! py-2 text-sm font-medium hover:text-[#fed017]! transition duration-300">
+                    <MenuButton className="header_menu flex w-full  items-center justify-center gap-x-1.5  cursor-pointer hover:text-white mx-auto text-center rounded-md text-white! py-2 text-sm font-medium hover:text-[#fed017]! transition duration-300">
                       {t('companies')}
                       <ChevronDownIcon
                         aria-hidden="true"
@@ -302,7 +326,7 @@ const Header = () => {
                       <MenuItem>
                         <NavLink
                           to="/companies/colgen"
-                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white! rounded-t-md' : 'text-black! hover:bg-gray-900 rounded-t-md hover:text-white! block px-3 py-2 ')}
+                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-[#fed017] rounded-t-md' : 'text-black! hover:bg-gray-900 rounded-t-md hover:text-white! block px-3 py-2 ')}
                         >
                           {t('companies_1')}
                         </NavLink>
@@ -311,7 +335,7 @@ const Header = () => {
                       <MenuItem>
                         <NavLink
                           to="/companies/coltech"
-                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white ' : 'text-black! hover:bg-gray-900  hover:text-white! block px-3 py-2 ')}
+                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-[#fed017] ' : 'text-black! hover:bg-gray-900  hover:text-white! block px-3 py-2 ')}
                         >
                           {t('companies_2')}
                         </NavLink>
@@ -320,7 +344,7 @@ const Header = () => {
                       <MenuItem>
                         <NavLink
                           to="/companies/colcons"
-                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-2 py-2 text-white rounded-b-md' : 'text-black! hover:bg-gray-900 rounded-b-md hover:text-white! block px-3 py-2 ')}
+                          className={({ isActive }) => (isActive ? 'bg-gray-900 block px-2 py-2 text-[#fed017] rounded-b-md' : 'text-black! hover:bg-gray-900 rounded-b-md hover:text-white! block px-3 py-2 ')}
                         >
                           {t('companies_3')}
                         </NavLink>
@@ -367,7 +391,7 @@ const Header = () => {
               as="div"
               className="relative flex flex-col items-center"
             >
-              <MenuButton className="inline-flex w-full justify-center gap-x-1.5 text-gray-300  hover:text-white mx-auto text-center rounded-md  py-2 text-sm font-medium">
+              <MenuButton className="flex items-center w-full justify-center gap-x-1.5 text-gray-300  hover:text-white mx-auto text-center rounded-md  py-2 text-sm font-medium">
                 {t('companies')}
                 <ChevronDownIcon
                   aria-hidden="true"
@@ -376,12 +400,12 @@ const Header = () => {
               </MenuButton>
               <MenuItems
                 transition
-                className="Menu__ absolute border-1 border-[#fed017] right-0 z-10 mt-11 w-48 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                className="Menu__ absolute border-1 border-[#fed017] -right-5 z-10 mt-11 w-48 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
               >
                 <MenuItem>
                   <NavLink
                     to="/companies/colgen"
-                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white! rounded-t-md' : 'text-black! hover:bg-gray-900 rounded-t-md hover:text-white! block px-3 py-2 ')}
+                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 !text-[#fed017] rounded-t-md' : 'text-black! hover:bg-gray-900 rounded-t-md hover:text-white! block px-3 py-2 ')}
                   >
                     {t('companies_1')}
                   </NavLink>
@@ -390,7 +414,7 @@ const Header = () => {
                 <MenuItem>
                   <NavLink
                     to="/companies/coltech"
-                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 text-white ' : 'text-black! hover:bg-gray-900  hover:text-white! block px-3 py-2 ')}
+                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-3 py-2 !text-[#fed017] ' : 'text-black! hover:bg-gray-900  hover:text-white! block px-3 py-2 ')}
                   >
                     {t('companies_2')}
                   </NavLink>
@@ -399,7 +423,7 @@ const Header = () => {
                 <MenuItem>
                   <NavLink
                     to="/companies/colcons"
-                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-2 py-2 text-white rounded-b-md' : 'text-black! hover:bg-gray-900 rounded-b-md hover:text-white! block px-3 py-2 ')}
+                    className={({ isActive }) => (isActive ? 'bg-gray-900 block px-2 py-2 !text-[#fed017] rounded-b-md' : 'text-black! hover:bg-gray-900 rounded-b-md hover:text-white! block px-3 py-2 ')}
                   >
                     {t('companies_3')}
                   </NavLink>
