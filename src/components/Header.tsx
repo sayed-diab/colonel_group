@@ -261,8 +261,8 @@ const Header = () => {
         </Drawer>
       </header>
       <motion.header
-        initial={{ y: 0 }}
-        animate={{ y: showNavbar ? 0 : -100 }}
+        initial={{ y: 100 }}
+        animate={{ y: showNavbar ? 0 : -200 }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
         className="header__ two fixed top-0 left-0 w-full px-3 sm:px-4  py-1 sm:py-8 z-50  text-white "
       >

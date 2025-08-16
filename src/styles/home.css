@@ -122,9 +122,9 @@
     color: #ffff !important;
 }
 
-.logo-marquee .rfm-marquee-container {
+.logo-marquee.rfm-marquee-container {
     background-color: #171717;
-    height: 300px;
+    height: 200px;
 }
 
 .logo-marquee .rfm-child img {

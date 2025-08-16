@@ -559,25 +559,25 @@ export default function HeroFinisher() {
         </motion.h2>
         <div className="network">
           <motion.img
-            initial={{ opacity: 0, filter: 'blur(20px)', scale: 0 }}
-            whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+            initial={{ rotate: 0, opacity: 0, filter: 'blur(20px)', scale: 0 }}
+            whileInView={{ rotate: 360, opacity: 1, filter: 'blur(0px)', scale: 1 }}
             transition={{
               delay: 0.5,
               duration: 0.7,
             }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="network AR"
             src={networkAR}
             alt="network"
           />
           <motion.img
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ rotate: 0, scale: 0 }}
+            whileInView={{ rotate: 360, scale: 1 }}
             transition={{
               delay: 0.5,
               duration: 0.7,
             }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="network EN"
             src={networkEN}
             alt="network"

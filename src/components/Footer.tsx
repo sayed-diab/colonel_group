@@ -7,7 +7,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import Ball from '../components/Ball';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
+import '../styles/footer.css';
 const Footer = () => {
   const { t } = useTranslation();
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
           <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9]">{t('contact_p1')}</motion.p>
           <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9]">{t('contact_p2')}</motion.p>
           <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9]">{t('contact_p3')}</motion.p>
-          <motion.p className="px-3 text-xs md:text-lg text-[#c9c9c9] !mb-4">{t('contact_p4')}</motion.p>
+          <motion.p className="px-3  text-xs md:text-lg text-[#c9c9c9] !mb-4">{t('contact_p4')}</motion.p>
           <motion.div
             initial={{ opacity: 0, filter: 'blur(20px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
